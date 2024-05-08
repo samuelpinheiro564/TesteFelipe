@@ -15,13 +15,13 @@ const Stack = createNativeStackNavigator();
 const StackRoutes = () => {
   return (
     <Stack.Navigator>
-    <Stack.Screen name="SphereSoluctions" component={SphereSoluctions} />
-    <Stack.Screen name="Home" component={Home} />
-    <Stack.Screen name="Dicas" component={Dicas} />
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="SphereSoluctions" component={SphereSoluctions} />
+      <Stack.Screen name="Dicas" component={Dicas} />
       <Stack.Screen name="CadastrarEmps" component={CadastrarEmps} />
+      <Stack.Screen name="pesquisarMaqs" component={pesquisarMaqs} />
       <Stack.Screen name="CadastrarMaqs" component={CadastrarMaqs} />
-          <Stack.Screen name="pesquisarMaqs" component={pesquisarMaqs} />
-        <Stack.Screen name="PesquisarEmps" component={PesquisarEmps} />
+      <Stack.Screen name="PesquisarEmps" component={PesquisarEmps} />
       <Stack.Screen name="Login" component={Login} />
     </Stack.Navigator>
   );

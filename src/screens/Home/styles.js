@@ -1,6 +1,10 @@
 import { StyleSheet } from "react-native";
 
+
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "white",
+  },
   titulo: {
     fontSize: 40,
     marginLeft: 20,
@@ -60,7 +64,8 @@ const styles = StyleSheet.create({
   },
   gradient: {
     position: "absolute",
-    top: -200,
+    zIndex: -10,
+    top: -250,
     left: 0,
     height: "100%",
     width: "100%",
