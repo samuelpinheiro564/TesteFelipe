@@ -2,34 +2,17 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Feather } from "@expo/vector-icons";
 
 import Home from "../screens/Home";
-import Profile from "../screens/Profile";
-import Category from "../screens/Category";
-import { user } from "../data/Profile";
+import Login from "../screens/Login";
+import SphereSoluctions from "../screens/SphereSoluctions";
 
 const Tab = createBottomTabNavigator();
 
 const TabRoutes = () => {
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
-      <Tab.Screen
-        name="Profile"
-        component={Profile}
-        initialParams={{ data: user }}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Feather
-              name="user"
-              size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
-            />
-          ),
-          tabBarLabel: "Perfil",
-          tabBarActiveTintColor: "#131313",
-          tabBarInactiveTintColor: "#D6D6D6",
-        }}
-      />
-      <Tab.Screen
-        name="Home"
+    <Tab.Navigator>
+            <Tab.Screen
+    
+          name="Home"
         component={Home}
         options={{
           tabBarIcon: ({ focused }) => (
@@ -44,19 +27,36 @@ const TabRoutes = () => {
           tabBarInactiveTintColor: "#D6D6D6",
         }}
       />
-
       <Tab.Screen
-        name="Category"
-        component={Category}
+        name="Login"
+        component={Login}
         options={{
           tabBarIcon: ({ focused }) => (
             <Feather
-              name="list"
+              name="user"
               size={24}
               color={focused ? "#131313" : "#D6D6D6"}
             />
           ),
-          tabBarLabel: "Categorias",
+          tabBarLabel: "Perfil",
+          tabBarActiveTintColor: "#131313",
+          tabBarInactiveTintColor: "#D6D6D6",
+        }}
+      />
+
+
+      <Tab.Screen
+        name="SphereSoluctions"
+        component={SphereSoluctions}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name="SphereSoluctions"
+              size={24}
+              color={focused ? "#131313" : "#D6D6D6"}
+            />
+          ),
+          tabBarLabel: "SphereSoluctions",
           tabBarActiveTintColor: "#131313",
           tabBarInactiveTintColor: "#D6D6D6",
         }}
