@@ -11,7 +11,6 @@ const TabRoutes = () => {
   return (
     <Tab.Navigator>
             <Tab.Screen
-    
           name="Home"
         component={Home}
         options={{
